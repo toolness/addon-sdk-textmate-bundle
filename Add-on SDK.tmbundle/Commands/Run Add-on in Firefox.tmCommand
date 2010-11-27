@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>cd $ADDON_SDK_ROOT
+source bin/activate
+cd $TM_DIRECTORY
+cfx run --use-server
+</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>~@r</string>
+	<key>name</key>
+	<string>Run Add-on in Firefox</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>1595B09C-A8C1-4051-89EA-1827E411BF67</string>
+</dict>
+</plist>

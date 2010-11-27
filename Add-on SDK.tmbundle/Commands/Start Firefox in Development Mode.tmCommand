@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#! /usr/bin/env python
+import os
+import subprocess
+
+ascript = """
+    tell application "Terminal"
+      activate
+      do script "cd %s; clear; source bin/activate; cfx develop"
+    end tell
+""" % os.environ['ADDON_SDK_ROOT']
+
+popen = subprocess.Popen([
+  "osascript", "-e", ascript
+])
+</string>
+	<key>fallbackInput</key>
+	<string>document</string>
+	<key>input</key>
+	<string>none</string>
+	<key>name</key>
+	<string>Start Firefox in Development Mode</string>
+	<key>output</key>
+	<string>discard</string>
+	<key>uuid</key>
+	<string>6BD53ECD-CC1D-4518-9A68-38F235B117D3</string>
+</dict>
+</plist>
